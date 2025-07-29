@@ -7,36 +7,6 @@ struct ContentView: View {
     @StateObject private var audioManager = AudioManager()
     
     var body: some View {
-        // MOTIVATION AI MODE - Displaying full-screen AI generator
-        ZStack {
-            Color.black.ignoresSafeArea()
-            
-            VStack(spacing: 0) {
-                // App Header
-                VStack(spacing: 12) {
-                    Image(systemName: "brain.head.profile")
-                        .font(.system(size: 60, weight: .light))
-                        .foregroundColor(.orange)
-                    
-                    Text("Motivation AI")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                    
-                    Text("Agentic AI for Personalized Motivation")
-                        .font(.headline)
-                        .foregroundColor(.gray)
-                        .multilineTextAlignment(.center)
-                }
-                .padding(.top, 40)
-                .padding(.bottom, 20)
-                
-                // AI Message Generator (Full Screen)
-                AIGeneratorEmbeddedView()
-            }
-        }
-        .preferredColorScheme(.dark)
-        /*
         ZStack {
             MainTabView()
                 .environmentObject(appViewModel)
@@ -134,7 +104,6 @@ struct ContentView: View {
                 audioManager.stopAudio()
             }
         }
-        */
     }
 }
 
