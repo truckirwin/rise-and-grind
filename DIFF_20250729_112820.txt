@@ -1,0 +1,178 @@
+=== INCREMENTAL DIFF - 2025-07-29 11:28:20 ===
+Context: Testing push it trigger phrase - user command received
+Branch: main
+Last commit: fef4d1a Smart save: Testing system-wide absolute path configuration - 2025-07-29 10:56:20
+
+=== Git Status ===
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    DIFF_20250729_105620.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	DIFF_20250729_112820.txt
+	~/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+=== Git Diff (staged) ===
+
+=== Git Diff (unstaged) ===
+diff --git a/DIFF_20250729_105620.txt b/DIFF_20250729_105620.txt
+deleted file mode 100644
+index 534a5b1..0000000
+--- a/DIFF_20250729_105620.txt
++++ /dev/null
+@@ -1,144 +0,0 @@
+-=== INCREMENTAL DIFF - 2025-07-29 10:56:20 ===
+-Context: Testing system-wide absolute path configuration
+-Branch: main
+-Last commit: 4436738 Smart save: Testing DevGuard backup creation - 2025-07-29 10:50:04
+-
+-=== Git Status ===
+-On branch main
+-Changes not staged for commit:
+-  (use "git add/rm <file>..." to update what will be committed)
+-  (use "git restore <file>..." to discard changes in working directory)
+-	deleted:    DIFF_20250729_105004.txt
+-
+-Untracked files:
+-  (use "git add <file>..." to include in what will be committed)
+-	DIFF_20250729_105620.txt
+-
+-no changes added to commit (use "git add" and/or "git commit -a")
+-
+-=== Git Diff (staged) ===
+-
+-=== Git Diff (unstaged) ===
+-diff --git a/DIFF_20250729_105004.txt b/DIFF_20250729_105004.txt
+-deleted file mode 100644
+-index 54834e0..0000000
+---- a/DIFF_20250729_105004.txt
+-+++ /dev/null
+-@@ -1,112 +0,0 @@
+--=== INCREMENTAL DIFF - 2025-07-29 10:50:04 ===
+--Context: Testing DevGuard backup creation
+--Branch: main
+--Last commit: 03e8ea2 Smart save: Testing DevGuard from reorganized structure - 2025-07-29 10:34:44
+--
+--=== Git Status ===
+--On branch main
+--Changes not staged for commit:
+--  (use "git add/rm <file>..." to update what will be committed)
+--  (use "git restore <file>..." to discard changes in working directory)
+--	deleted:    DIFF_20250729_103444.txt
+--	modified:   RiseAndGrind/Views/ContentView.swift
+--
+--Untracked files:
+--  (use "git add <file>..." to include in what will be committed)
+--	DIFF_20250729_105004.txt
+--
+--no changes added to commit (use "git add" and/or "git commit -a")
+--
+--=== Git Diff (staged) ===
+--
+--=== Git Diff (unstaged) ===
+--diff --git a/DIFF_20250729_103444.txt b/DIFF_20250729_103444.txt
+--deleted file mode 100644
+--index e229dec..0000000
+----- a/DIFF_20250729_103444.txt
+--+++ /dev/null
+--@@ -1,25 +0,0 @@
+---=== INCREMENTAL DIFF - 2025-07-29 10:34:44 ===
+---Context: Testing DevGuard from reorganized structure
+---Branch: main
+---Last commit: 7ff09cf RESCUE: Initial commit - preserve existing work
+---
+---=== Git Status ===
+---On branch main
+---Untracked files:
+---  (use "git add <file>..." to include in what will be committed)
+---	DIFF_20250729_103444.txt
+---
+---nothing added to commit but untracked files present (use "git add" to track)
+---
+---=== Git Diff (staged) ===
+---
+---=== Git Diff (unstaged) ===
+---
+---=== Recent Commits ===
+---7ff09cf RESCUE: Initial commit - preserve existing work
+---
+---=== Recovery Steps ===
+---1. Extract daily backup zip to recover source code
+---2. Check DIFF_*.txt files for incremental changes throughout the day
+---3. Apply any uncommitted changes from latest diff file
+---4. git add . && git commit -m 'Recovered from backup'
+--diff --git a/RiseAndGrind/Views/ContentView.swift b/RiseAndGrind/Views/ContentView.swift
+--index 88fcb63..1dbe626 100644
+----- a/RiseAndGrind/Views/ContentView.swift
+--+++ b/RiseAndGrind/Views/ContentView.swift
+--@@ -7,36 +7,6 @@ struct ContentView: View {
+--     @StateObject private var audioManager = AudioManager()
+--     
+--     var body: some View {
+---        // MOTIVATION AI MODE - Displaying full-screen AI generator
+---        ZStack {
+---            Color.black.ignoresSafeArea()
+---            
+---            VStack(spacing: 0) {
+---                // App Header
+---                VStack(spacing: 12) {
+---                    Image(systemName: "brain.head.profile")
+---                        .font(.system(size: 60, weight: .light))
+---                        .foregroundColor(.orange)
+---                    
+---                    Text("Motivation AI")
+---                        .font(.largeTitle)
+---                        .fontWeight(.bold)
+---                        .foregroundColor(.white)
+---                    
+---                    Text("Agentic AI for Personalized Motivation")
+---                        .font(.headline)
+---                        .foregroundColor(.gray)
+---                        .multilineTextAlignment(.center)
+---                }
+---                .padding(.top, 40)
+---                .padding(.bottom, 20)
+---                
+---                // AI Message Generator (Full Screen)
+---                AIGeneratorEmbeddedView()
+---            }
+---        }
+---        .preferredColorScheme(.dark)
+---        /*
+--         ZStack {
+--             MainTabView()
+--                 .environmentObject(appViewModel)
+--@@ -134,7 +104,6 @@ struct ContentView: View {
+--                 audioManager.stopAudio()
+--             }
+--         }
+---        */
+--     }
+-- }
+-- 
+--
+--=== Recent Commits ===
+--03e8ea2 Smart save: Testing DevGuard from reorganized structure - 2025-07-29 10:34:44
+--7ff09cf RESCUE: Initial commit - preserve existing work
+--
+--=== Recovery Steps ===
+--1. Extract daily backup zip to recover source code
+--2. Check DIFF_*.txt files for incremental changes throughout the day
+--3. Apply any uncommitted changes from latest diff file
+--4. git add . && git commit -m 'Recovered from backup'
+-
+-=== Recent Commits ===
+-4436738 Smart save: Testing DevGuard backup creation - 2025-07-29 10:50:04
+-03e8ea2 Smart save: Testing DevGuard from reorganized structure - 2025-07-29 10:34:44
+-7ff09cf RESCUE: Initial commit - preserve existing work
+
+=== Recent Commits ===
+fef4d1a Smart save: Testing system-wide absolute path configuration - 2025-07-29 10:56:20
+4436738 Smart save: Testing DevGuard backup creation - 2025-07-29 10:50:04
+03e8ea2 Smart save: Testing DevGuard from reorganized structure - 2025-07-29 10:34:44
+7ff09cf RESCUE: Initial commit - preserve existing work
