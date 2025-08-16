@@ -15,7 +15,7 @@ struct DemoVideoScripts {
             tone: .energetic,
             backgroundImageName: "dawn_mountain_valley",
             audioEnabled: true,
-            duration: 60,
+            duration: 30,
             actionPrompt: "Get Hunting!"
         ),
         
@@ -30,7 +30,7 @@ struct DemoVideoScripts {
             tone: .toughLove,
             backgroundImageName: "runner_distance",
             audioEnabled: true,
-            duration: 60,
+            duration: 30,
             actionPrompt: "Time to Hunt!"
         ),
         
@@ -45,7 +45,7 @@ struct DemoVideoScripts {
             tone: .energetic,
             backgroundImageName: "winding_road",
             audioEnabled: true,
-            duration: 60,
+            duration: 30,
             actionPrompt: "Dominate the Rest!"
         ),
         
@@ -60,7 +60,7 @@ struct DemoVideoScripts {
             tone: .toughLove,
             backgroundImageName: "canyon_vista",
             audioEnabled: true,
-            duration: 60,
+            duration: 30,
             actionPrompt: "Finish Strong!"
         ),
         
@@ -75,7 +75,7 @@ struct DemoVideoScripts {
             tone: .compassionate,
             backgroundImageName: "starry_night",
             audioEnabled: true,
-            duration: 60,
+            duration: 30,
             actionPrompt: "Rest Like a Champion!"
         ),
         
@@ -90,7 +90,7 @@ struct DemoVideoScripts {
             tone: .actionFocused,
             backgroundImageName: "city_skyline",
             audioEnabled: true,
-            duration: 45,
+            duration: 30,
             actionPrompt: "Dominate LinkedIn!"
         ),
         
@@ -105,7 +105,7 @@ struct DemoVideoScripts {
             tone: .inspiring,
             backgroundImageName: "volcano_landscape",
             audioEnabled: true,
-            duration: 50,
+            duration: 30,
             actionPrompt: "Bounce Back Stronger!"
         ),
         
@@ -120,7 +120,7 @@ struct DemoVideoScripts {
             tone: .compassionate,
             backgroundImageName: "spring_blossoms",
             audioEnabled: true,
-            duration: 55,
+            duration: 30,
             actionPrompt: "Take the Next Step"
         ),
         
@@ -135,7 +135,7 @@ struct DemoVideoScripts {
             tone: .professional,
             backgroundImageName: "urban_dawn",
             audioEnabled: true,
-            duration: 65,
+            duration: 30,
             actionPrompt: "Prepare to Dominate!"
         ),
         
@@ -150,7 +150,7 @@ struct DemoVideoScripts {
             tone: .professional,
             backgroundImageName: "meadow_flowers",
             audioEnabled: true,
-            duration: 60,
+            duration: 30,
             actionPrompt: "Build Connections!"
         ),
         
@@ -165,7 +165,7 @@ struct DemoVideoScripts {
             tone: .energetic,
             backgroundImageName: "golden_fields",
             audioEnabled: true,
-            duration: 50,
+            duration: 30,
             actionPrompt: "Finish Strong!"
         ),
         
@@ -180,7 +180,7 @@ struct DemoVideoScripts {
             tone: .energetic,
             backgroundImageName: "mountain_sunrise",
             audioEnabled: true,
-            duration: 55,
+            duration: 30,
             actionPrompt: "Build Momentum!"
         )
     ]

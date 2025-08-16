@@ -2186,13 +2186,9 @@ struct GoalEditor: View {
 
 // MARK: - Embedded AI Message Generator
 struct AIGeneratorEmbeddedView: View {
-    @State private var intensity: Double = 50
     @State private var languageClean: Double = 50
     @State private var humorStyle: Double = 50
     @State private var actionOrientation: Double = 50
-    @State private var messageLength: Double = 50
-    @State private var musicStyle: Double = 50
-    @State private var visualStyle: Double = 50
     
     @State private var userInput: String = ""
     @State private var generatedMessage: String = ""
@@ -2208,18 +2204,10 @@ struct AIGeneratorEmbeddedView: View {
                     VStack(spacing: 20) {
                         // Header
                         VStack(spacing: 8) {
-                            Image(systemName: "brain.head.profile")
-                                .font(.system(size: 50))
-                                .foregroundColor(.orange)
-                            
-                            Text("AI Message Generator")
+                            Text("Create your own clip!")
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
-                            
-                            Text("Customize your perfect motivational message")
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
                         }
                         .padding(.top)
                         
@@ -2237,9 +2225,6 @@ struct AIGeneratorEmbeddedView: View {
                         
                         // Slider Controls
                         VStack(spacing: 20) {
-                            EmbeddedSliderRow(title: "Intensity", value: $intensity, 
-                                    leftLabel: "😌 Chill", rightLabel: "💪 Drill Sergeant")
-                            
                             EmbeddedSliderRow(title: "Language Style", value: $languageClean,
                                     leftLabel: "🤬 Raw", rightLabel: "😇 Clean")
                             
@@ -2248,15 +2233,6 @@ struct AIGeneratorEmbeddedView: View {
                             
                             EmbeddedSliderRow(title: "Approach", value: $actionOrientation,
                                     leftLabel: "🧘 Mindful", rightLabel: "⚡ Action")
-                            
-                            EmbeddedSliderRow(title: "Message Length", value: $messageLength,
-                                    leftLabel: "💬 Quote", rightLabel: "📜 Speech")
-                            
-                            EmbeddedSliderRow(title: "Music Style", value: $musicStyle,
-                                    leftLabel: "🎵 Chill", rightLabel: "🎸 Rock")
-                            
-                            EmbeddedSliderRow(title: "Visual Style", value: $visualStyle,
-                                    leftLabel: "🖼️ Still", rightLabel: "🎬 Video")
                         }
                         .padding(.horizontal)
                         
@@ -2313,10 +2289,10 @@ struct AIGeneratorEmbeddedView: View {
                                         Spacer()
                                         
                                         VStack {
-                                            Text("Intensity")
+                                            Text("Approach")
                                                 .font(.caption)
                                                 .foregroundColor(.secondary)
-                                            Text("\(Int(intensity))%")
+                                            Text(actionOrientation > 50 ? "Action" : "Mindful")
                                                 .font(.caption2)
                                                 .fontWeight(.semibold)
                                                 .foregroundColor(.white)
@@ -2325,10 +2301,10 @@ struct AIGeneratorEmbeddedView: View {
                                         Spacer()
                                         
                                         VStack {
-                                            Text("Length")
+                                            Text("Duration")
                                                 .font(.caption)
                                                 .foregroundColor(.secondary)
-                                            Text(messageLength > 50 ? "Long" : "Short")
+                                            Text("30 sec")
                                                 .font(.caption2)
                                                 .fontWeight(.semibold)
                                                 .foregroundColor(.white)
@@ -2363,9 +2339,9 @@ struct AIGeneratorEmbeddedView: View {
     }
     
     private func determineMessageStyle() -> String {
-        if intensity > 80 {
+        if actionOrientation > 80 {
             return languageClean < 30 ? "Ultra Intense" : "Drill Sergeant"
-        } else if intensity < 30 {
+        } else if actionOrientation < 30 {
             return "Zen & Mindful"
         } else if humorStyle > 60 {
             return languageClean > 70 ? "Motivational Comedy" : "Raw Comedy"
